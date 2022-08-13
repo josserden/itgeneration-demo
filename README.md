@@ -1,1 +1,1 @@
-# itgeneration-demo
+# Заняття 2. Масиви
