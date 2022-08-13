@@ -6,4 +6,11 @@
  */
 
 const string =
-  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptas cupiditate excepturi,';
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptas cupiditate excepturi';
+
+const array = string.split(' ');
+console.log(array);
+array.splice(0, 1);
+array.splice(array.length - 1, 1);
+
+console.log(array.join(' '));

@@ -6,3 +6,11 @@
  */
 
 const values = '8 11';
+const numbers = values.split(' ');
+
+const a = Number(numbers[0]);
+const b = Number(numbers[1]);
+
+const area = a * b;
+
+console.log(area);
