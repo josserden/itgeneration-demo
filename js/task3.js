@@ -1,24 +1,18 @@
-// todo Перебір масиву
+// todo Площа прямокутника
 /*
- * Напиши скрипт для перебору масиву fruits циклом for.
- * Для кожного елемента масиву виведіть у консоль рядок
- * у форматі номер_елемента: значення_елемента.
- * Нумерація елементів має починатися з першого.
+ * Напиши функцію getRectArea(dimensions) для обчислення площі прямокутника зі сторонами, значення яких будуть передані до параметра dimensions у вигляді рядка. Значення гарантовано розділені пробілом.
  */
 
-const fruits = ['🍎', '🍇', '🍑', '🍌', '🍋'];
+function getRectArea(dimensions = '1 1') {
+  const numbers = dimensions.split(' ');
 
-for (let i = 0; i < fruits.length; i += 1) {
-  const fruit = fruits[i];
+  const a = Number(numbers[0]);
+  const b = Number(numbers[1]);
 
-  console.log(`${i + 1} - ${fruit}`);
+  return a * b;
 }
 
-// let index = 0;
-// for (const fruit of fruits) {
-//   console.log(`${(index += 1)} - ${fruit}`);
-// }
-
-// for (const fruit of fruits) {
-//   console.log(`${fruits.indexOf(fruit) + 1} - ${fruit}`);
-// }
+console.log(getRectArea('8 11'));
+console.log(getRectArea('80 31'));
+console.log(getRectArea('45 67'));
+console.log(getRectArea());

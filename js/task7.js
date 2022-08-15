@@ -1,17 +1,18 @@
-// todo Пошук елемента
+// todo Середнє значення
 /*
- * Напиши скрипт пошуку найменшого числа в масиві.
- * Код має працювати для будь-якого масиву чисел.
- * Використовуйте цикл для вирішення задачі.
+ * Напишіть функцію calAverage() яка приймає довільну кількість аргументів і повертає їхнє середнє значення. Усі аргументи будуть лише числами.
  */
 
-const numbers = [2, 17, 94, 1, 23, 37, 0, -5]; // -5
-let minElement = numbers[0];
+function calAverage() {
+  let total = 0;
 
-for (const number of numbers) {
-  if (minElement > number) {
-    minElement = number;
+  for (const arg of arguments) {
+    total += arg;
   }
+
+  return total / arguments.length;
 }
 
-console.log(minElement);
+console.log(calAverage(1, 2, 3, 4)); // 2.5
+console.log(calAverage(14, 8, 2)); // 8
+console.log(calAverage(27, 43, 2, 8, 36)); // 23.2
